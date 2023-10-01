@@ -1,2 +1,2 @@
 # clone-tabnews
-Implementação do https://www.tabnews.com.br para fiz didáticos.
+Implementação do https://www.tabnews.com.br para fins didáticos.
