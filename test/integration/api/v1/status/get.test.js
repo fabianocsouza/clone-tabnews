@@ -11,10 +11,10 @@ describe("GET /api/v1/status", () => {
       expect(response.status).toBe(200);
 
       const responseBody = await response.json();
-      expect(responseBody.update_at).toBeDefined();
+      expect(responseBody.updated_at).toBeDefined();
 
-      const parseUpdateAt = new Date(responseBody.update_at).toISOString();
-      expect(responseBody.update_at).toBe(parseUpdateAt);
+      const parseUpdatedAt = new Date(responseBody.updated_at).toISOString();
+      expect(responseBody.updated_at).toBe(parseUpdatedAt);
 
       expect(responseBody.dependencies.database.version).toEqual("16.0");
       expect(responseBody.dependencies.database.max_connections).toEqual(100);

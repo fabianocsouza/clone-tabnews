@@ -1,4 +1,4 @@
-import useSWR from 'swr';
+import useSWR from "swr";
 
 async function fetchIPA(key) {
   const response = await fetch(key);
@@ -28,9 +28,7 @@ function UpdateAt() {
     updatedAtText = new Date(data.updated_at).toLocaleString("pt-BR");
   }
 
-  return (
-    <div>Última atualização: {updatedAtText}</div>
-  )
+  return <div>Última atualização: {updatedAtText}</div>;
 }
 
 function DatabaseStatus() {
@@ -45,8 +43,12 @@ function DatabaseStatus() {
     databaseStatusInformation = (
       <>
         <div>Versão: {data.dependencies.database.version}</div>
-        <div>Conexões abertas: {data.dependencies.database.opened_connections}</div>
-        <div>Conexões máximas: {data.dependencies.database.max_connections}</div>
+        <div>
+          Conexões abertas: {data.dependencies.database.opened_connections}
+        </div>
+        <div>
+          Conexões máximas: {data.dependencies.database.max_connections}
+        </div>
       </>
     );
   }
@@ -56,5 +58,5 @@ function DatabaseStatus() {
       <h1>Database</h1>
       <div>{databaseStatusInformation}</div>
     </>
-  )
+  );
 }
